@@ -1,7 +1,7 @@
 {
   "drive": {
     "type": "talonfx",
-    "id": 3,
+    "id": 5,
     "canbus": null
   },
   "angle": {
@@ -11,7 +11,7 @@
   },
   "encoder": {
     "type": "cancoder",
-    "id": 4,
+    "id": 13,
     "canbus": null
   },
   "inverted": {
