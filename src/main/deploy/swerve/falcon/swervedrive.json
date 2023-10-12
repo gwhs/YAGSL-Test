@@ -4,7 +4,7 @@
   "imu": {
     "type": "navx",
     "id": 13,
-    "canbus": "canivore"
+    "canbus": "rio"
   },
   "invertedIMU": true,
   "modules": [
