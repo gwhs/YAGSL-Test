@@ -1,0 +1,3 @@
+Change the swerveParaser object argument in robotContainer to include talon (json file) than the originally neo file by changing the(swerve/neo to swerve/falon). 
+Also changed the canbus value in backleft, backright, frontleft, frontright which is in **swerve -> falcon -> module ** folder "" to "rio"
+Read the start.md before you start anything

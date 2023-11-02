@@ -42,7 +42,7 @@ public class DeviceJson
   /**
    * The CAN bus name which the device resides on if using CAN.
    */
-  public String canbus = "";
+  public String canbus = "rio";
 
   /**
    * Create a {@link SwerveAbsoluteEncoder} from the current configuration.
