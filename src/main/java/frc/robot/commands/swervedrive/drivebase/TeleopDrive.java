@@ -82,8 +82,8 @@ public class TeleopDrive extends CommandBase
       // Estimate the desired angle in radians.
       angle += (angVelocity * (timer.get() - lastTime)) * controller.config.maxAngularVelocity;
       // Get the desired ChassisSpeeds given the desired angle and current angle.
-      ChassisSpeeds correctedChassisSpeeds = controller.getTargetSpeeds(xVelocity, yVelocity, angle,
-                                                                        swerve.getHeading().getRadians());
+      ChassisSpeeds correctedChassisSpeeds = controller.getTargetSpeeds(xVelocity, yVelocity, angle
+                                                                        );//swerve.getHeading().getRadians()
       // Drive using given data points.
       swerve.drive(
           SwerveController.getTranslation2d(correctedChassisSpeeds),

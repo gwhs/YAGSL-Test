@@ -101,14 +101,14 @@ public class SwerveController
    * @return {@link ChassisSpeeds} which can be sent to th Swerve Drive.
    */
   public ChassisSpeeds getTargetSpeeds(
-      double xInput, double yInput, double angle, double currentHeadingAngleRadians)
+      double xInput, double yInput, double angle) //double currentHeadingAngleRadians
   {
     // Convert joystick inputs to m/s by scaling by max linear speed.  Also uses a cubic function
     // to allow for precise control and fast movement.
     double x = xInput * config.maxSpeed;
     double y = yInput * config.maxSpeed;
 
-    return getRawTargetSpeeds(x, y, angle, currentHeadingAngleRadians);
+    return getRawTargetSpeeds(x, y, angle); // currentHeadingAngleRadians
   }
 
   /**
@@ -150,7 +150,7 @@ public class SwerveController
     // position when stick released).
     double angle =
         withinHypotDeadband(headingX, headingY) ? lastAngleScalar : Math.atan2(headingX, headingY);
-    ChassisSpeeds speeds = getTargetSpeeds(xInput, yInput, angle, currentHeadingAngleRadians);
+    ChassisSpeeds speeds = getTargetSpeeds(xInput, yInput, angle); // currentHeadingAngleRadians
 
     // Used for the position hold feature
     lastAngleScalar = angle;
